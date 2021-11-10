@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ *{margin:0; padding:0;}
+ li{list-style-type:none;}
+ 
+ @media screen and (orientation:portrait){
+ 	div.left{display:none;}
+ }
+ @media screen and (orientation:landscape){
+ 	div:first-child{overflow:hidden;}
+ 	div.left{width:30%; float:left;}
+ 	div.right{width:70%; float:right;}
+ }
+ div.content{padding:16px;}
+ li{padding:24px 0; border-bottom: 1px solid #c7c7c7;}
+ 
+</style>
+</head>
+<body>
+<div>
+	<div class="left">
+		<div class="content">
+			<h1>List</h1>
+			<ul>
+				<li>Velit ipsum ullamco</li>
+				<li>Nulla qui officia anim</li>
+				<li>quis proident tempor ipsum</li>
+				<li>et sunt sit culpa ad</li>
+				<li>fugiat reprehenderit sint mollit.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="right">
+		<div class="content">
+			<h1>Lorem ipsum</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec tortor sem. Integer eleifend augue sed turpis maximus accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor facilisis urna, ut pharetra lorem bibendum imperdiet. Proin sit amet diam at mi sagittis eleifend. Nunc convallis id urna elementum laoreet. Praesent blandit facilisis elit non accumsan. Maecenas euismod aliquet ante, in dignissim ligula posuere vel. Quisque imperdiet ultricies tellus quis fringilla. Nulla id elit a diam vehicula dictum. Suspendisse vel euismod lorem. Aliquam nec consectetur erat. Praesent pulvinar mi urna, id ullamcorper risus efficitur nec. Donec ut lectus finibus, posuere ante ac, fermentum risus. Nunc vel quam in dolor blandit sollicitudin.</p>
+			<p>Proin a lobortis lorem. Morbi non massa placerat risus ullamcorper mattis. Aenean pellentesque est faucibus enim aliquam rutrum. Donec vulputate ornare commodo. Proin faucibus efficitur lectus, ut aliquet diam tristique egestas. Phasellus nibh turpis, iaculis ac euismod porttitor, venenatis lacinia lacus. Aenean varius congue odio ac interdum. Proin malesuada lobortis congue. Morbi sed mattis sem. Donec at ex eros. Vestibulum rutrum mattis leo vel efficitur. Etiam imperdiet posuere aliquet. Pellentesque tincidunt justo non posuere fringilla.</p>
+			<p>Mauris egestas luctus risus vitae lobortis. Nullam tempor condimentum erat et laoreet. Praesent egestas sed ipsum vitae scelerisque. Vestibulum convallis sed augue sed rutrum. Phasellus laoreet neque id sapien varius, ac pharetra sapien pharetra. Cras vel lectus vel leo volutpat viverra sit amet eu mi. In hac habitasse platea dictumst. Sed gravida purus turpis, vel consequat leo convallis nec.</p>
+			<p>Integer nec iaculis nisl. Mauris aliquam, dolor et porta lacinia, ipsum nibh laoreet lorem, at congue nunc quam vitae erat. Phasellus vehicula porta elit, et imperdiet felis cursus sit amet. Duis ac dolor in turpis dapibus accumsan at ut purus. Suspendisse potenti. Nam erat tortor, gravida id purus et, ultricies semper ligula. Aenean eget elit mi. Integer quis augue quam. Vestibulum purus nisl, rhoncus in volutpat sit amet, convallis dapibus lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus quis rhoncus leo, nec ultricies sem. Praesent tempor quis nisi in ultrices. Etiam turpis arcu, sodales non aliquam ac, laoreet et metus. Curabitur eget enim dui. Curabitur facilisis turpis et pharetra ornare.</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
