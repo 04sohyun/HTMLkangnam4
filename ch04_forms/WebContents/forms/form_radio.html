@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form basic</title>
+</head>
+<body>
+<form>
+	<table>
+		<tr>
+		<!-- 읽기 전송 출력 요소 label for = "id값" -->
+		  <td><label for="username">이름</label></td>
+		  <!-- type속성은 input태그의 종류를 표시, type이 text인 경우 생략가능 text 타입이 default임, 
+		  		id 속성은 주로 해당 요소를 핸들링(찾아서 처리)용을 사용할 때 부여
+		  		name속성은 action으로 값 전달시 필요한 name속성
+		  	 	페이지내에서 요소에 접근시  name으로 접근가능하지만, 주로 id로 접근하기도함  -->
+		  <td><input id="username" type="text" name="username"></td>
+		</tr>
+		<tr>
+		  <td>성별</td>
+		  <td><!-- 라디오 버튼을 클릭하기 쉽게 사용 -->
+		  	<input id="man" type="radio" name="gender" value ="m" checked />
+		  	<label for="man">남자</label>
+		  	<input id="woman" type="radio" name="gender" value ="w" />
+		  	<label for="woman">여자</label>
+		  </td>
+		</tr>
+	</table>
+	<input type="submit" value="가입"><!-- submit버튼 form내에 있어야 함 -->
+</form>
+</body>
+</html>
