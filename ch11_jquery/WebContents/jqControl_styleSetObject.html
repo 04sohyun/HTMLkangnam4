@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+$(document).ready(function(){
+	/* css(속성, 값) 속성값 지정하기 */
+	$('.box').css({
+		float:'left',	
+		margin:10,
+		width:100,
+		height:100,
+		backgroundColor:'red'
+	});
+	
+	alert($('.box').css('float')); /* css(속성) 속성값 가져오기 */
+});
+</script>
+</head>
+<body>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+</body>
+</html>
