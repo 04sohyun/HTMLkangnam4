@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	//Date 객체를 선언합니다. 현재 시간 측정
+	var date = new Date(); //Date객체 생성자 호출 - core객체
+	
+	//요소 추출
+	var year = date.getFullYear();
+	var month = date.getMonth() + 1; //getMonth()의 값은 0~11까지
+	var day = date.getDate();
+	var hours = date.getHours();
+	var minutes = date.getMinutes();
+	var seconds = date.getSeconds();
+	
+	alert(year+":"+month+":"+day+":"+hours+":"+minutes+":"+seconds);
+</script>
+<script>
+	if(hours<5){
+		alert('잠을 자렴...'); //명령어의 끝 ; 붙여야 됨
+	}else if(hours<7){//5~7
+		alert('준비');
+	}else if(hours<9){//7~9
+		alert('출근');
+	}else if(hours<12){//9~12
+		alert('워크');
+	}else if(hours<14){//12~14
+		alert('식사');
+	}else{
+		alert('각종 업무');
+	}
+</script>
+</body>
+</html>

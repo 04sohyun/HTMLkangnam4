@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	var input=prompt("네 자리 정수를 입력해주세요.","입력");
+	
+	var num1 = parseInt(input/1000);
+	var num2 = parseInt(input%1000/100);
+	var num3 = parseInt(input%1000%100/10);
+	var num4 = parseInt(input%1000%100%10);
+	
+	alert('천의 자리는 '+num1+' 백의 자리는 '+num2+' 십의 자리는 '+num3+' 일의 자리는 '+num4+'이다.');
+</script>
+</body>
+</html>
