@@ -126,7 +126,7 @@ $(document).ready(function(){
 		//스크롤을 못하게 합니다.
 		$('body').css('overflow','hidden');
 	}
-	
+	//사용자 정의 함수
 	function hideLightBox(){
 		//라이트박스를 안보이게 합니다.
 		$('#darken-background').hide();
@@ -146,7 +146,7 @@ $(document).ready(function(){
 	
 	//라이트박스 제거 이벤트 보조
 	$('#lightbox').click(function (event){
-		event.stopPropagationv()
+		event.stopPropagation()
 	});
 });
 </script> 

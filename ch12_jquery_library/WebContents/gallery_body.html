@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+  div.item:nth-child(1){background:blueviolet;}
+  div.item:nth-child(2){background:pink;}
+  div.item:nth-child(3){background:burlywood;}
+</style>
+<!-- 라이브러리 연결 -->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+ //첫번째 ready 이벤트
+ var count=0;
+ var width=0;
+ var height=0;
+ $(document).ready(function(){
+	 //변수 선언
+	 width=$('[data-role="slider"]').attr('data-width');  //attr(속성명,값)<-설정, attr(속성명)<-값가져오기
+	 height=$('[data-role="slider"]').attr('data-height');  //attr(속성명,값)<-설정, attr(속성명)<-값가져오기
+	 count=$('[data-role="slider"] div.item').length; //3
+	 
+	 //스타일 적용
+	 $('[data-role="slider"]').css({
+		 position:'relative',
+		 overflow:'hidden',
+		 width:width,
+		 height:height
+	 }).find('.container').css({
+		 position:'absolute',
+		 overflow:'hidden',
+		 width:count*width
+	 }).find('.item').css({
+		 width:width,
+		 height:height,
+		 float:'left'
+	 });
+ });
+ //두번째 ready 이벤트
+ $(document).ready(function(){
+	 var currentPage=0;
+	 var changePage=function(){
+		 $('[data-role="slider"]>.container').animate({
+			 left:-currentPage*width
+		 }, 500);
+	 };
+	 
+	 //이벤트 연결
+	 $('#left-button').click(function(){
+		if(currentPage>0) {
+			//왼쪽으로 이동
+			currentPage=currentPage-1;
+			changePage();
+		}
+	 });
+	 
+	 $('#right-button').click(function(){
+		if(currentPage<count-1){
+			//오른쪽으로 이동
+			currentPage = currentPage+1;
+			changePage();
+		} 
+	 });
+ });
+</script>
+</head>
+<body>
+<div data-role="slider" data-width="500" data-height="300">
+	<div class="container">
+		<div class="item">
+		  <h1>Lorem ipsum dolor sit amet</h1>
+		  <p>Lorem ipsum dolor sit amet, consectetur</p>
+		</div>
+		<div class="item">
+		  <h1>Lorem ipsum dolor sit amet</h1>
+		  <p>Lorem ipsum dolor sit amet, consectetur</p>
+		</div>
+		<div class="item">
+		 <h1>Lorem ipsum dolor sit amet</h1>
+		  <p>Lorem ipsum dolor sit amet, consectetur</p>
+		</div>
+	</div>
+</div>
+<button id="left-button">←</button>
+<button id="right-button">→</button>
+</body>
+</html>
